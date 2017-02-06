@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = ['$q', '$log', '$http', 'Upload', 'authservice', picService];
+module.exports = ['$q', '$log', '$http', 'Upload', 'authService', picService];
 
-function picService($q, $log, $http, Upload, authservice){
+function picService($q, $log, $http, Upload, authService) {
   $log.debug('picService');
 
   let service = {};
@@ -16,12 +16,10 @@ function picService($q, $log, $http, Upload, authservice){
   service.uploadGalleryPic = function(galleryData, picData) {
     $log.debug('uploadGalleryPic');
 
-    return authservice.getToken()
+    return authService.getToken()
     .then( token => {
       let url = `${baseUrl}/${galleryData._id}/pic`;
-
       headers.Authorization = `Bearer ${token}`;
-
       return Upload.upload({
         url,
         headers,
@@ -36,6 +34,32 @@ function picService($q, $log, $http, Upload, authservice){
     .then( res => {
       galleryData.pics.unshift(res.data);
       return res.data;
+    })
+    .catch( err => {
+      $log.error(err.message);
+      return $q.reject(err);
+    });
+  };
+
+  service.deleteGalleryPic = function(galleryData, picID) {
+    $log.debug('uploadGalleryPic');
+
+    return authService.getToken()
+    .then( token => {
+      let url = `${baseUrl}/${galleryData._id}/pic/${picID}`;
+
+      headers.Authorization = `Bearer ${token}`;
+
+      return Upload.upload({
+        url,
+        headers,
+        method: 'DELETE'
+      });
+    })
+    .then( res => {
+      $log.debug('pic deleted!');
+      window.location.reload();
+      return res.status;
     })
     .catch( err => {
       $log.error(err.message);

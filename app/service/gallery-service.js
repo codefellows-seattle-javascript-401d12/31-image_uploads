@@ -74,7 +74,6 @@ function galleryService($q, $log, $http, authService){
       return $http.put(url, galleryData, config);
     })
     .then( res => {
-      console.log('response ==== ', res);
       service.galleries.filter(function(ele){
         return ele._id === galleryID;
       })[0] = res.data;

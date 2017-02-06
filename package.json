@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-
   "scripts": {
-    "build": "node ./node_modules/webpack/bin/webpack.js",
-    "build-watch": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "test": "node ./node_modules/karma/bin/karma start --single-run",
-    "test-watch": "node ./node_modules/karma/bin/karma start"
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "build-watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "test-watch": "./node_modules/karma/bin/karma start"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +29,7 @@
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.26.0",
+    "ng-file-upload": "^12.2.13",
     "node-sass": "^4.3.0",
     "pascalcase": "^0.1.1",
     "resolve-url-loader": "^1.6.1",
@@ -52,12 +52,8 @@
     "type": "git",
     "url": "git+https://github.com/bhavyaab/28-angular_auth.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/bhavyaab/28-angular_auth/issues"
   },
   "homepage": "https://github.com/bhavyaab/28-angular_auth#readme"
-
 }
