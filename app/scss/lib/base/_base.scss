@@ -1,0 +1,44 @@
+@import "../theme/vars";
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+ height: 100%;
+ width: 80%;
+ margin-left: 10%;
+ font-family: sans-serif;
+}
+
+
+form{
+  width: $box-std * 2;
+  padding: $gutter-std;
+  margin-left: $gutter-std * 2;
+  margin-bottom: $gutter-std / 2;
+  li{
+   list-style: none;
+   color: $color-d;
+   font-size: $padding-std * 2;
+   margin-left: $gutter-std / 2;
+  }
+}
+
+input{
+ font-size: $padding-std * 1.5;
+ display: block;
+ margin: $gutter-std / 2;
+ padding: $padding-std;
+ width: $box-std * 2;
+ border: none;
+ border-radius: $padding-std / 2;
+}
+button{
+ border-radius: $padding-std / 1.5;
+ border: none;
+ padding: $padding-std;
+ font-size: $padding-std * 2;
+ color: $color-l;
+ cursor: pointer;
+}

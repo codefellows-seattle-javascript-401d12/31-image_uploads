@@ -1,0 +1,14 @@
+@import "../scss/lib/theme/vars";
+
+.signup{
+ input[class='btn-std']{
+  @extend button;
+ }
+}
+
+.btn-std{
+ width: $box-std;
+ margin-right: $gutter-std * 2.8;
+ background-color: $brand-primary;
+ float: right;
+}

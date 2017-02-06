@@ -1,0 +1,41 @@
+@import "../scss/lib/theme/vars";
+
+.gallery-item{
+   color: $brand-primary;
+   font-size: $padding-std * 3;
+   margin-left: $gutter-std * 2;
+   margin-bottom: 15vh;
+
+   .container{
+     width: 50%;
+     margin-left: 30%;
+     span:first-child{
+       float: left;
+     }
+     span:last-child{
+       float: right;
+     }
+    .update-btn{
+       background-color: $brand-primary;
+       border-radius: $padding-std / 1.5;
+       border: none;
+       padding: 1vh $gutter-std *3;
+       font-size: 2vw;
+       color: $color-l;
+       vertical-align: middle;
+    }
+   }
+ }
+ .current-item{
+    clear: both;
+    background-color: $brand-primary * 1.5;
+    color: $color-l;
+    width: $box-std * 2;
+    font-size: $padding-std * 2;
+    border-radius: $padding-std;
+    margin-top: $gutter-std / 2;
+    margin-bottom: $gutter-std / 5;
+  div{
+    padding: $padding-std;
+  }
+ }

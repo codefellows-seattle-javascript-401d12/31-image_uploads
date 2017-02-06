@@ -1,0 +1,16 @@
+@import "../scss/lib/theme/vars";
+
+.join-container{
+ p{
+  text-align:right;
+  width: $box-std * 2.1;
+  color: $color-d;
+  font-size: $padding-std * 2;
+ }
+ a{
+  text-decoration: none;
+  color: $brand-primary;
+  font-size: $padding-std * 2;
+  font-weight: bold;
+ }
+}
