@@ -1,0 +1,32 @@
+@import "../scss/lib/theme/vars";
+.upload-pic {
+  h3 {
+    font-size: 2.5vw;
+    text-decoration: underline;
+    margin-bottom: 0;
+  }
+
+  fieldset {
+    margin-top: 0;
+
+    input {
+      margin-bottom: $gutter-std;
+    }
+  }
+
+  div {
+    text-align: right;
+
+    .grab-img {
+      float: left;
+      margin-top: 1vw;
+      margin-right: $gutter-std;
+      font-size: 2.5vw;
+      text-decoration: underline;
+    }
+
+    button{
+     width: 30%;
+    }
+  }
+}

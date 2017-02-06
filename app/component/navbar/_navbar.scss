@@ -1,0 +1,33 @@
+@import "../scss/lib/theme/vars";
+
+
+
+.navbar{
+  background-color: $brand-primary;
+  height: 10vh;
+  color: $color-l;
+  position: relative;
+
+  img{
+   height: 5vh;
+   width: 4vw;
+   margin-top: 3vh;
+   margin-left: 5vw;
+   display: inline-block;
+  }
+  h2{
+   position: absolute;
+   text-decoration: none;
+   display: inline-block;
+   left: 9vw;
+   top: 3vh;
+  }
+  button{
+   width: $box-std / 2;
+   position: absolute;
+   top: 3vh;
+   left: $box-std * 1.6;
+   background-color:$color-l;
+   color: $brand-primary;
+  }
+ }

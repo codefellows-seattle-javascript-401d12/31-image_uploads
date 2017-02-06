@@ -1,0 +1,8 @@
+@import "../scss/lib/theme/vars";
+
+.home{
+ .gallery{
+   display: block;
+   padding: $gutter-std / 2;
+  }
+}
